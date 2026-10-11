@@ -23,3 +23,8 @@ h1 {
   color: #f1be32;
   font-size: min(5vw, 1.2em); /*El primer valor es el creciente, mientras que el segundo es el tope*/
 }
+
+nav > ul { /* Selector usado cuando quieres modificar elementos que son hijos directos el primer elemento especificado, en este caso modificamos "ul" que es hijo directo de "nav" */
+  display:flex;
+  justify-content: space-evenly;
+}
