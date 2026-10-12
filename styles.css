@@ -21,7 +21,7 @@ header {
 
 h1 {
   color: #f1be32;
-  font-size: min(5vw, 1.2em); /*El primer valor es el creciente, mientras que el segundo es el tope*/
+  font-size: min(5vw, 1.2em); /* El primer valor es el creciente, mientras que el segundo es el tope */
 }
 
 nav > ul { /* Selector usado cuando quieres modificar elementos que son hijos directos el primer elemento especificado, en este caso modificamos "ul" que es hijo directo de "nav" */
@@ -35,4 +35,14 @@ h1, h2 {
 
 h2 {
   border-bottom: 4px solid #dfdfe2;
+}
+
+.sr-only { /* Esta seccion de codigo tiene como fin ocultar un elemento de la vista del usuario, dejandola visible unicamente para dispositivos de lectura de pantalla */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0); /* clip: rect() define que parte de un elemento es visible. PD: esta propiedad esta obsoleta en su lugar se recomienda usar clip-path junto con inset() */
+  clip-path: inset(50%); /* define que porcion del elemento se puede ver, normalmente clip-path es usada para crear artisticas y variadas formas geometricas */
+  white-space: nowrap;
 }
